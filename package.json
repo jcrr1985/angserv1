@@ -13,6 +13,8 @@
     "addit": "git add .",
     "comit": "git commit -m \"Fly high!\"",
     "pushit": "git push",
+    "juliouser":"jcrr1985",
+    "juliopass":"m15159582",
  "devz":"npm run addit && npm run comit && npm run pushit"
 
   },
