@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {  UserService} from './user.service';
+import { UserService } from './user.service';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 
 @Component({
   selector: 'app-root',
@@ -8,29 +10,29 @@ import {  UserService} from './user.service';
 })
 export class AppComponent implements OnInit {
 
-  users = [];
+  users;
 
-  datafromService;
+  AsyncAwaitGetUsers;
+  constructor(protected userService: UserService) { }
 
-  constructor(protected userService: UserService) {}
 
-  ngOnInit() {
+      ngOnInit() {
+/*Handled using then*/
+        this.userService.getUsers()
+          .then((d) => d.json())
+          .then((res) => {
+            this.users = res.results;
+          });
 
-   this.userService.getUsers()
-      .subscribe(
-        (data) => {
-          for (let index = 0; index < 5; index++) {
-          this.users.push(data['results'][index]);
+/*Handled using Async/Await*/
+        this.userService.AsyncAwaitGetUsers();
+        }
 
-          }
-
-          console.log( this.users);
-        },
-        (error) => {
-          console.error(error);
       }
-    );
 
-  }
 
-}
+
+
+
+
+
