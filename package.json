@@ -15,7 +15,7 @@
     "pushit": "git push",
     "juliouser":"jcrr1985",
     "juliopass":"m15159582",
- "devz":"npm run addit && npm run comit && npm run pushit"
+ "devz":"npm run addit && npm run comit && npm run pushit && npm run pushit && npm run juliouser"
 
   },
   "private": true,
