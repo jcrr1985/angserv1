@@ -12,7 +12,6 @@ export class AppComponent implements OnInit {
 
   users;
 
-  AsyncAwaitGetUsers;
   constructor(protected userService: UserService) { }
 
 
